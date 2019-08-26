@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2019_08_26_183828) do
     t.integer "experience", default: 0
     t.integer "gold", default: 0
     t.text "items"
-    t.string "checks", default: ["", "", ""], array: true
     t.text "notes"
     t.bigint "user_id"
     t.bigint "role_id"

@@ -17,7 +17,7 @@ class CharactersController < ProtectedController
 
   # POST /characters
   def create
-    @character = current_user.characters.build(shelf_params)
+    @character = current_user.characters.build(character_params)
 
     if @character.save
       render json: @character, status: :created, location: @character
@@ -50,6 +50,6 @@ class CharactersController < ProtectedController
   # Only allow a trusted parameter "white list" through.
   def character_params
     params.require(:character).permit(:name, :level, :experience, :gold, :items,
-                                      :checks, :notes, :user_id, :role_id)
+                                      :notes, :user_id, :role_id)
   end
 end
