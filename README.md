@@ -4,7 +4,7 @@
 
 
 ### Links
-https://radiant-fortress-68128.herokuapp.com/
+https://gloomhaven-tracker-api.herokuapp.com
 
 ### Technologies
 
