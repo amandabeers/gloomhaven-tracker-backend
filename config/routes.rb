@@ -2,6 +2,8 @@
 
 Rails.application.routes.draw do
   # RESTful routes
+  resources :characters, except: %i[new edit]
+  resources :roles, except: %i[new edit]
   resources :examples, except: %i[new edit]
 
   # Custom routes
