@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class RolesController < ApplicationController
+class RolesController < OpenReadController
   before_action :set_role, only: %i[show update destroy]
 
   # GET /roles
@@ -49,6 +49,6 @@ class RolesController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def role_params
-    params.require(:role).permit(:class, :description, :char_img)
+    params.require(:role).permit(:role_name, :description, :char_img)
   end
 end

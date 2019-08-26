@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 2019_08_26_145228) do
   end
 
   create_table "roles", force: :cascade do |t|
-    t.string "class", null: false
-    t.text "description"
-    t.string "char_img"
+    t.string "role_name", null: false
+    t.text "description", null: false
+    t.string "char_img", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
