@@ -49,6 +49,7 @@ class RolesController < OpenReadController
 
   # Only allow a trusted parameter "white list" through.
   def role_params
-    params.require(:role).permit(:role_name, :description, :char_img)
+    params.require(:role).permit(:role_name, :description, :char_img,
+                                 :char_img_sm)
   end
 end
