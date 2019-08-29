@@ -50,6 +50,6 @@ class CharactersController < ProtectedController
   # Only allow a trusted parameter "white list" through.
   def character_params
     params.require(:character).permit(:name, :level, :experience, :gold, :items,
-                                      :notes, :user_id, :role_id)
+                                      :notes, :location, :user_id, :role_id)
   end
 end

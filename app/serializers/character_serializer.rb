@@ -1,5 +1,5 @@
 class CharacterSerializer < ActiveModel::Serializer
-  attributes :id, :name, :level, :experience, :gold, :items, :notes,
+  attributes :id, :name, :level, :experience, :gold, :items, :notes, :location,
              :role, :editable
 
   def editable
