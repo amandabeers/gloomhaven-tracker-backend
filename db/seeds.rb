@@ -27,10 +27,10 @@ roles = Role.create([
                       {
                         role_name: 'Cragheart',
                         description: 'The Cragheart is sort of a jack of all
-                        trades; competent in using the very earth beneath him in
-                        a wide variety of damage and sustain options. He\'s
-                        volatile in the sense that he provides excellent crowd
-                        control and transforms the battlefield, but can\'t
+                        trades. He\'s competent in using the very earth beneath
+                        him in a wide variety of damage and sustain options.
+                        He\'s volatile in the sense that he provides excellent
+                        crowd control and transforms the battlefield, but can\'t
                         maneuver swiftly and risks interfering with his
                         teammates as well.',
                         char_img: 'img_cr.jpg',
