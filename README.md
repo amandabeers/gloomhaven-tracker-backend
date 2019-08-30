@@ -6,9 +6,9 @@ This is a helper app used for tracking character stats for the game Gloomhaven. 
 
 ### Links
 
-[Frontend Repo](https://github.com/amandabeers/gloomhaven-tracker-client)
-[Deployed Client](https://amandabeers.github.io/gloomhaven-tracker-client/)
-[Deployed API](https://gloomhaven-tracker-api.herokuapp.com)
+- [Frontend Repo](https://github.com/amandabeers/gloomhaven-tracker-client)
+- [Deployed Client](https://amandabeers.github.io/gloomhaven-tracker-client/)
+- [Deployed API](https://gloomhaven-tracker-api.herokuapp.com)
 
 ### Setup Steps
 
