@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_29_021150) do
+ActiveRecord::Schema.define(version: 2019_10_31_182344) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ability_cards", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "level", null: false
+    t.string "img", null: false
+    t.bigint "role_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["role_id"], name: "index_ability_cards_on_role_id"
+  end
 
   create_table "characters", force: :cascade do |t|
     t.string "name", null: false
@@ -58,6 +68,7 @@ ActiveRecord::Schema.define(version: 2019_08_29_021150) do
     t.index ["token"], name: "index_users_on_token", unique: true
   end
 
+  add_foreign_key "ability_cards", "roles"
   add_foreign_key "characters", "roles"
   add_foreign_key "characters", "users"
   add_foreign_key "examples", "users"
