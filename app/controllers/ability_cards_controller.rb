@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class AbilityCardsController < ApplicationController
+class AbilityCardsController < OpenReadController
   before_action :set_ability_card, only: %i[show update destroy]
 
   # GET /ability_cards
