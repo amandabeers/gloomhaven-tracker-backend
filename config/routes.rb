@@ -2,10 +2,15 @@
 
 Rails.application.routes.draw do
   # RESTful routes
-  resources :ability_cards, except: %i[new edit]
+  # resources :ability_cards, except: %i[new edit]
   resources :characters, except: %i[new edit]
   resources :roles, except: %i[create update destroy new edit]
   resources :examples, except: %i[new edit]
+
+  resources :roles do
+    resources :ability_cards, except: %i[create update destroy new edit],
+                              shallow: true
+  end
 
   # Custom routes
   post '/sign-up' => 'users#signup'

@@ -5,7 +5,7 @@ class AbilityCardsController < OpenReadController
 
   # GET /ability_cards
   def index
-    @ability_cards = AbilityCard.all
+    @ability_cards = AbilityCard.where('role_id = ?', params[:role_id])
 
     render json: @ability_cards
   end

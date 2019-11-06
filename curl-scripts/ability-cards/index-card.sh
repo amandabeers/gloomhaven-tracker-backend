@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/ability_cards" \
+curl "http://localhost:4741/roles/${ID}/ability_cards" \
   --include \
   --request GET
 
