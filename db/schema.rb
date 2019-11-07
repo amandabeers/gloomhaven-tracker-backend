@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_31_182344) do
+ActiveRecord::Schema.define(version: 2019_11_07_192246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 2019_10_31_182344) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["role_id"], name: "index_ability_cards_on_role_id"
+  end
+
+  create_table "character_ability_cards", force: :cascade do |t|
+    t.bigint "character_id"
+    t.bigint "ability_card_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ability_card_id"], name: "index_character_ability_cards_on_ability_card_id"
+    t.index ["character_id"], name: "index_character_ability_cards_on_character_id"
   end
 
   create_table "characters", force: :cascade do |t|
@@ -69,6 +78,8 @@ ActiveRecord::Schema.define(version: 2019_10_31_182344) do
   end
 
   add_foreign_key "ability_cards", "roles"
+  add_foreign_key "character_ability_cards", "ability_cards"
+  add_foreign_key "character_ability_cards", "characters"
   add_foreign_key "characters", "roles"
   add_foreign_key "characters", "users"
   add_foreign_key "examples", "users"
