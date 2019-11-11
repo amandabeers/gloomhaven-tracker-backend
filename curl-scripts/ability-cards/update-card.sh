@@ -9,7 +9,8 @@ curl "http://localhost:4741/ability_cards/${ID}" \
     "ability_card": {
       "name": "'"${NAME}"'",
       "level": "'"${LEVEL}"'",
-      "img": "'"${IMG}"'"
+      "img": "'"${IMG}"'",
+      "role_id": "'"${ROLE}"'"
     }
   }'
 
